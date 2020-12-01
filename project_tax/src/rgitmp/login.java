@@ -12,7 +12,7 @@ import javax.swing.SwingConstants;
 
 
 
-
+import java.awt.Image;
 import java.awt.Color;
 import java.awt.Font;
 import javax.swing.JTextField;
@@ -146,7 +146,8 @@ public class login {
 		frame.getContentPane().add(signupbutton);
 		
 		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon("D:\\User Profile\\Desktop\\imgfirst.jpg"));
+		Image img = new ImageIcon(this.getClass().getResource("/imgfirst.jpg")).getImage();
+		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\Rushabh\\git\\Tax_calculator\\project_tax\\Images\\imgfirst.jpg"));
 		lblNewLabel_1.setBounds(-1553, -499, 1942, 1015);
 		frame.getContentPane().add(lblNewLabel_1);
 	}
@@ -156,6 +157,4 @@ public class login {
 	public void setLoginbuttonBackground(Color background) {
 		loginbutton.setBackground(background);
 	}
-
-
 }
