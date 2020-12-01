@@ -5,18 +5,26 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
 
+import net.proteanit.sql.DbUtils;
 import prosql.TaxSql;
 
 import java.awt.Font;
 import javax.swing.ImageIcon;
 import java.awt.Color;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.awt.event.ActionEvent;
 
 public class Menu {
 	private JFrame frame;
 	private static String loginId;
+	private JTable table;
 	/**
 	 * Launch the application.
 	 */
@@ -63,7 +71,16 @@ public class Menu {
 		btnNewButton.setBounds(120, 98, 120, 30);
 		frame.getContentPane().add(btnNewButton);
 		
+
+		
 		JButton btnNewButton_1 = new JButton("Retrive ");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg5) {
+				
+				display disp = new display();
+				disp.disp(loginId);
+			}
+		});
 		btnNewButton_1.setForeground(Color.WHITE);
 		btnNewButton_1.setBackground(Color.BLUE);
 		btnNewButton_1.setBounds(120, 159, 120, 30);

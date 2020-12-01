@@ -25,11 +25,12 @@ import java.awt.SystemColor;
 public class display {
 	private JFrame frame;
 	private JTable table;
-
+	private static String loginId;
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	public  void disp(String logid) {
+		loginId = logid;
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -71,31 +72,25 @@ public class display {
 		table = new JTable();
 		scrollPane.setViewportView(table);
 		
-		JButton btnNewButton = new JButton("Retrieve");
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+		try {
+            Class.forName("com.mysql.jdbc.Driver");
 				
-				login le = new login();
-				try {
-		            Class.forName("com.mysql.jdbc.Driver");
-						
-						Connection conn1=DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "Rishabh");
-						Statement se= conn1.createStatement();
-						String s="Select * from income;"; 
-						
-						ResultSet rs =  se.executeQuery(s);
-						
-						table.setModel(DbUtils.resultSetToTableModel(rs));
-						
-						
-					}catch(Exception e2) {
-						System.out.println(e2);
-					}
+				Connection conn1=DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "Rishabh");
+//				Statement se= conn1.createStatement();
+				PreparedStatement confirm = conn1.prepareStatement("select * from income where logid = ?" );
+				confirm.setString(1, loginId);
+//				System.out.println(confirm);
+				ResultSet rs = confirm.executeQuery();
+//				ResultSet rs =  se.executeQuery(s);
+				
+				table.setModel(DbUtils.resultSetToTableModel(rs));
+				
+				
+			}catch(Exception e2) {
+				System.out.println(e2);
 			}
-		});
-		btnNewButton.setBounds(198, 379, 167, 49);
-		frame.getContentPane().add(btnNewButton);
-	}
+		
+		}
 
 
 }
