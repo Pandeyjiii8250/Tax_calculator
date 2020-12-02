@@ -23,6 +23,7 @@ public class signup {
 	private JTextField occupation;
 	private JTextField loginid;
 	private JPasswordField password1;
+	private JTextField email;
 
 	/**
 	 * Launch the application.
@@ -87,23 +88,34 @@ public class signup {
 		JLabel lblNewLabel_3 = new JLabel("Login Id");
 		lblNewLabel_3.setForeground(Color.WHITE);
 		lblNewLabel_3.setFont(new Font("Tahoma", Font.BOLD, 13));
-		lblNewLabel_3.setBounds(10, 149, 86, 27);
+		lblNewLabel_3.setBounds(10, 196, 86, 27);
 		frame.getContentPane().add(lblNewLabel_3);
 		
 		loginid = new JTextField();
-		loginid.setBounds(129, 147, 222, 33);
+		loginid.setBounds(131, 194, 222, 33);
 		frame.getContentPane().add(loginid);
 		loginid.setColumns(10);
 		
 		JLabel lblNewLabel_4 = new JLabel("Password");
 		lblNewLabel_4.setForeground(Color.WHITE);
 		lblNewLabel_4.setFont(new Font("Tahoma", Font.BOLD, 13));
-		lblNewLabel_4.setBounds(10, 193, 72, 32);
+		lblNewLabel_4.setBounds(10, 239, 72, 32);
 		frame.getContentPane().add(lblNewLabel_4);
 		
 		password1 = new JPasswordField();
-		password1.setBounds(130, 191, 222, 33);
+		password1.setBounds(131, 240, 222, 33);
 		frame.getContentPane().add(password1);
+		
+		JLabel lblNewLabel_6 = new JLabel("Email");
+		lblNewLabel_6.setFont(new Font("Tahoma", Font.BOLD, 13));
+		lblNewLabel_6.setForeground(Color.WHITE);
+		lblNewLabel_6.setBounds(10, 149, 72, 36);
+		frame.getContentPane().add(lblNewLabel_6);
+		
+		email = new JTextField();
+		email.setBounds(131, 144, 222, 33);
+		frame.getContentPane().add(email);
+		email.setColumns(10);
 		
 		JButton btnNewButton = new JButton("SIGN UP");
 		btnNewButton.setBackground(Color.BLUE);
@@ -112,7 +124,7 @@ public class signup {
 			public void actionPerformed(ActionEvent arg0) {
 				
 				TaxSql new_user = new TaxSql();
-				new_user.newuser(firstname.getText(), loginid.getText(), password1.getText(), occupation.getText(), "email");
+				new_user.newuser(firstname.getText(), loginid.getText(), password1.getText(), occupation.getText(), email.getText());
 				login back = new login();
 				back.main(null);
 				
@@ -121,11 +133,17 @@ public class signup {
 		btnNewButton.setBounds(148, 309, 136, 39);
 		frame.getContentPane().add(btnNewButton);
 		
+		
+		
 		JLabel lblNewLabel_5 = new JLabel("");
-		lblNewLabel_5.setIcon(new ImageIcon("C:\\Users\\omkar.omkar-PC\\Desktop\\bg.jpg"));
-		lblNewLabel_5.setBounds(-214, -25, 643, 425);
+		lblNewLabel_5.setForeground(Color.WHITE);
+		lblNewLabel_5.setIcon(new ImageIcon("C:\\Users\\Rushabh\\git\\Tax_calculator\\project_tax\\Images\\imgfirst.jpg"));
+		lblNewLabel_5.setBounds(-174, -22, 643, 425);
 		frame.getContentPane().add(lblNewLabel_5);
+		
+		
+		
+		
+		
 	}
-
-
 }

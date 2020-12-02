@@ -103,7 +103,7 @@ public class Menu {
 		
 		JLabel lblNewLabel = new JLabel("Tax Calculator and Management System\r\n");
 		lblNewLabel.setForeground(Color.WHITE);
-		lblNewLabel.setFont(new Font("Georgia", Font.BOLD, 13));
+		lblNewLabel.setFont(new Font("Georgia", Font.BOLD, 15));
 		lblNewLabel.setBounds(38, 11, 304, 46);
 		frame.getContentPane().add(lblNewLabel);
 		
@@ -122,8 +122,8 @@ public class Menu {
 		frame.getContentPane().add(btnNewButton_3);
 		
 		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\omkar.omkar-PC\\Desktop\\bg.jpg"));
-		lblNewLabel_1.setBounds(-1027, -288, 1490, 696);
+		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\Rushabh\\git\\Tax_calculator\\project_tax\\Images\\imgfirst.jpg"));
+		lblNewLabel_1.setBounds(-894, -288, 1490, 696);
 		frame.getContentPane().add(lblNewLabel_1);
 	}
 

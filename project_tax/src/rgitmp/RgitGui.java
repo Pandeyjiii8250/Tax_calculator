@@ -36,6 +36,7 @@ public class RgitGui {
 	private static int ded2 = 0;
 	private static double[] op = {0,0,0};
 	private static String loginId;
+	private JLabel lblNewLabel_5;
 	/*
 	 * Launch the application.
 	 */
@@ -87,7 +88,7 @@ public class RgitGui {
 		JLabel tf1 = new JLabel("Enter Age");
 		tf1.setForeground(Color.WHITE);
 		tf1.setFont(new Font("Tahoma", Font.PLAIN, 17));
-		tf1.setBounds(37, 49, 122, 14);
+		tf1.setBounds(37, 49, 122, 20);
 		frame.getContentPane().add(tf1);
 		
 		JLabel tf2 = new JLabel("Income");
@@ -205,8 +206,8 @@ public class RgitGui {
 		frame.getContentPane().add(btnNewButton_1);
 		
 		lblNewLabel_4 = new JLabel("Tax Calculator and Management System\r\n");
-		lblNewLabel_4.setForeground(Color.BLACK);
-		lblNewLabel_4.setFont(new Font("Georgia", Font.BOLD, 13));
+		lblNewLabel_4.setForeground(new Color(255, 255, 0));
+		lblNewLabel_4.setFont(new Font("Georgia", Font.BOLD, 15));
 		lblNewLabel_4.setBounds(37, 11, 319, 24);
 		frame.getContentPane().add(lblNewLabel_4);
 		
@@ -227,6 +228,11 @@ public class RgitGui {
 		lblNewLabel_3.setIcon(new ImageIcon("C:\\Users\\omkar.omkar-PC\\Desktop\\bg.jpg"));
 		lblNewLabel_3.setBounds(-1689, -25, 2174, 745);
 		frame.getContentPane().add(lblNewLabel_3);
+		
+		lblNewLabel_5 = new JLabel("");
+		lblNewLabel_5.setIcon(new ImageIcon("C:\\Users\\Rushabh\\git\\Tax_calculator\\project_tax\\Images\\imgfirst.jpg"));
+		lblNewLabel_5.setBounds(-44, -55, 610, 550);
+		frame.getContentPane().add(lblNewLabel_5);
 		
 		
 		

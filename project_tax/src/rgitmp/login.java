@@ -3,11 +3,11 @@ package rgitmp;
 import prosql.TaxSql;
 
 import java.awt.EventQueue;
-import java.sql.*;
+//import java.sql.*;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.SwingConstants;
+//import javax.swing.JOptionPane;
+//import javax.swing.SwingConstants;
 
 
 
@@ -21,8 +21,10 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
-import javax.swing.UIManager;
-import java.awt.SystemColor;
+//import javax.swing.UIManager;
+//import java.awt.SystemColor;
+//import javax.swing.JPanel;
+//import javax.swing.DebugGraphics;
 
 public class login {
 	private JFrame frame;
@@ -65,7 +67,7 @@ public class login {
 		
 		JLabel lblNewLabel = new JLabel("TAX CALACULATOR AND MANAGEMENT SYSTEM");
 		lblNewLabel.setBounds(10, 11, 423, 37);
-		lblNewLabel.setForeground(Color.BLACK);
+		lblNewLabel.setForeground(Color.WHITE);
 		lblNewLabel.setFont(new Font("Georgia", Font.BOLD, 13));
 		lblNewLabel.setBackground(Color.LIGHT_GRAY);
 		frame.getContentPane().add(lblNewLabel);
@@ -145,11 +147,10 @@ public class login {
 		});
 		frame.getContentPane().add(signupbutton);
 		
-		JLabel lblNewLabel_1 = new JLabel("");
-		Image img = new ImageIcon(this.getClass().getResource("/imgfirst.jpg")).getImage();
-		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\Rushabh\\git\\Tax_calculator\\project_tax\\Images\\imgfirst.jpg"));
-		lblNewLabel_1.setBounds(-1553, -499, 1942, 1015);
-		frame.getContentPane().add(lblNewLabel_1);
+		JLabel lblNewLabel_2 = new JLabel("");
+		lblNewLabel_2.setIcon(new ImageIcon("C:\\Users\\Rushabh\\git\\Tax_calculator\\project_tax\\Images\\imgfirst.jpg"));
+		lblNewLabel_2.setBounds(0, 0, 389, 343);
+		frame.getContentPane().add(lblNewLabel_2);
 	}
 	public Color getLoginbuttonBackground() {
 		return loginbutton.getBackground();

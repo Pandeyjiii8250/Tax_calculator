@@ -26,6 +26,7 @@ public class display {
 	private JFrame frame;
 	private JTable table;
 	private static String loginId;
+	private JLabel lblNewLabel;
 	/**
 	 * Launch the application.
 	 */
@@ -70,6 +71,7 @@ public class display {
 		frame.getContentPane().add(scrollPane);
 		
 		table = new JTable();
+		table.setBackground(new Color(102, 205, 170));
 		scrollPane.setViewportView(table);
 		
 		try {
@@ -84,6 +86,11 @@ public class display {
 //				ResultSet rs =  se.executeQuery(s);
 				
 				table.setModel(DbUtils.resultSetToTableModel(rs));
+				
+				lblNewLabel = new JLabel("");
+				lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Rushabh\\git\\Tax_calculator\\project_tax\\Images\\imgfirst.jpg"));
+				lblNewLabel.setBounds(0, 0, 588, 467);
+				frame.getContentPane().add(lblNewLabel);
 				
 				
 			}catch(Exception e2) {
